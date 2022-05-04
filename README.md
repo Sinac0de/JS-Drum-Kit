@@ -7,10 +7,11 @@
 * [Technologies Used](#technologies-used)
 
 # <a name="project-demo"></a>Project Demo
-* https://sinac0de.github.io/JS-Drum-Kit/
+* You can see the Demo <a href="https://sinac0de.github.io/JS-Drum-Kit/">Here</a> 
 
 # <a name="technologies-used"></a>Technologies Used
 * Html5
 * Css3
 * Vanilla Js
 * Responsive Design
+* Flexbox & Grid
