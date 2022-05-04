@@ -1,6 +1,6 @@
 ![Picture](https://i.ibb.co/Cv6mqvS/drums.jpg)
 # JS-Drum-Kit
-> A simple webpage that allows you to play drum sounds by either using your keyboard or pressing the button on the screen!
+> A simple webpage that allows you to play drum sounds by either using your keyboard or pressing the buttons on the screen!
 
 # Table of Contents
 * [Project Demo](#project-demo)
