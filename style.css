@@ -46,6 +46,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 1em;
 }
 
 .key {
@@ -60,6 +61,7 @@ h1 {
     border-radius: 15px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: all 0.2s;
+    margin: 0 0.5em;
 }
 
 .key kbd {
@@ -114,7 +116,7 @@ h1 {
     }
 
     .key {
-
+        margin: 0;
         width: 5em;
         height: 5em;
     }
