@@ -32,7 +32,7 @@ h1 {
     min-height: 100vh;
     position: absolute;
     z-index: -5;
-    background-image: url("/background3.jpg");
+    background-image: url("images/background1.jpg");
     background-position: center;
     filter: brightness(70%);
     background-size: cover;
@@ -59,7 +59,7 @@ h1 {
     border: 3px solid black;
     border-radius: 15px;
     margin: .5em;
-    transition: scale 0.3s;
+    transition: all 0.2s;
 }
 
 .key kbd {
@@ -73,21 +73,28 @@ h1 {
 }
 
 .playing {
-    transform: scale(1.1);
+    transform: scale(1.2);
     background-color: rgb(255, 0, 0);
-    transition: scale 0.3s;
+    transition: all 0.2s;
 }
 
 .credit {
     color: white;
     font-family: "Lobster", serif;
-    font-weight: bolder;
+}
+
+.credit a,
+.credit a:visited,
+.credit a:active {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 
 @media (max-width:432px) {
     body {
-        background-image: url("/background1.jpg")
+        background-image: url("images/background2.jpg")
     }
 
     h1 {
