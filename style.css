@@ -1,123 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
-
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
-    font-family: "Lobster", serif;
-    font-weight: bolder;
-    color: white;
-    font-size: 5rem;
+  font-family: "Lobster", serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 5rem;
 }
-
 
 .bg-image {
-    min-width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    z-index: -5;
-    background-image: url("images/background1.jpg");
-    background-position: center;
-    filter: brightness(70%);
-    background-size: cover;
+  min-width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  z-index: -5;
+  background-image: url("images/background1.jpg");
+  background-position: center;
+  filter: brightness(70%);
+  background-size: cover;
 }
 
-
 .keys {
-    width: 100%;
-    font-family: "Bungee", sans-serif;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1em;
+  width: 100%;
+  font-family: "Bungee", sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1em;
 }
 
 .key {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 8em;
-    height: 8em;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 3px solid black;
-    border-radius: 15px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transition: all 0.07s;
-    margin: 0 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 8em;
+  height: 8em;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.07s;
+  margin: 0 0.5em;
 }
 
 .key kbd {
-    font-weight: bold;
-    color: white;
-    font-size: 2.5em;
+  font-weight: bold;
+  color: white;
+  font-size: 2.5em;
 }
 
 .sound {
-    color: orange;
+  color: orange;
 }
 
 .playing {
-    transform: scale(1.2);
-    border: 5px solid rgb(255, 102, 0);
-    box-shadow: 0px 0px 16px 14px rgba(255, 102, 0, 0.1);
-    transition: all 0.07s;
+  transform: scale(1.2);
+  border: 5px solid rgb(255, 102, 0);
+  box-shadow: 0px 0px 16px 14px rgba(255, 102, 0, 0.1);
+  transition: all 0.07s;
 }
 
 .credit {
-    color: white;
-    font-family: "Lobster", serif;
+  color: white;
+  font-family: "Lobster", serif;
 }
 
 .credit a,
 .credit a:visited,
 .credit a:active {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(23, 40, 90);
+  z-index: 999;
+}
 
-@media (max-width:432px) {
-    body {
-        background-image: url("images/background2.jpg")
-    }
+.loading h2 {
+  margin-top: 1em;
+  color: white;
+}
 
-    h1 {
-        font-size: 3em;
-    }
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #2fa5ff; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
 
-    .bg-image {
-        background-image: none;
-    }
+.hidden {
+  display: none;
+}
 
-    .keys {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        margin: 1em;
-        gap: 1.3em;
-    }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-    .key {
-        margin: 0;
-        width: 5em;
-        height: 5em;
-    }
+@media (max-width: 432px) {
+  body {
+    background-image: url("images/background2.jpg");
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .bg-image {
+    background-image: none;
+  }
+
+  .keys {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 1em;
+    gap: 1.3em;
+  }
+
+  .key {
+    margin: 0;
+    width: 5em;
+    height: 5em;
+  }
 }
